@@ -18,6 +18,9 @@ from PyQt5.QtWidgets import QApplication, QTableWidgetItem, QMainWindow, QSlider
 from PyQt5.uic import loadUi
 from PyQt5.QtCore import pyqtSlot, QThread, pyqtSignal
 from PyQt5 import QtGui, QtCore
+
+    
+    
         
 # -----------------------MAINWINDOW--------------------------------------------
 class MainWindow(QMainWindow):

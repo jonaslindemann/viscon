@@ -169,12 +169,12 @@ def xlinextr(xl, surfx, ex,ey, ndof, edof,avec):
     
     a = 0
     for i in elnr:
-        #Spara x och y koordinater för elementet
-         exdof[a,:] = ex[i,:]
-         eydof[a,:] = ey[i,:]
+         #Spara x och y koordinater för elementet
+         exdof[a,:] = ex[int(i),:]
+         eydof[a,:] = ey[int(i),:]
 
          #Plocka ut frihetsgrader och u-väden för dessa vid samtliga tidpunkter
-         dofs = edof[i,:]-1
+         dofs = edof[int(i),:]-1
 
          eu1dof[a,:] = avec[dofs[0],:]
          eu2dof[a,:] = avec[dofs[1],:]
@@ -307,11 +307,11 @@ def ylinextr(yl, surfy, ex, ey, ndof, edof,avec):
     a = 0
     for i in elnr:
         #Spara x och y koordinater för elementet
-         exdof[a,:] = ex[i,:]
-         eydof[a,:] = ey[i,:]
+         exdof[a,:] = ex[int(i),:]
+         eydof[a,:] = ey[int(i),:]
 
          #Plocka ut frihetsgrader och u-väden för dessa vid samtliga tidpunkter
-         dofs = edof[i,:]-1
+         dofs = edof[int(i),:]-1
 
          eu1dof[a,:] = avec[dofs[0],:]
          eu2dof[a,:] = avec[dofs[1],:]
